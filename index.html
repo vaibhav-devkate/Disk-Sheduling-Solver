@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+   
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+    
+    <title>Disk Sheduling Solver</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+  </head>
+
+
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div class="header">Disk-Scheduling Solver</div>
+
+<div class="maincontainer">
+
+    <div class="inputcontainer form1">
+      <h1>Input</h1>
+
+     
+        <fieldset>
+          <label for="disksize">Disk size</label>
+          <input type="number" placeholder="Enter value here" id="size" required>
+        </fieldset>
+  
+        <fieldset>
+          <label for="headposition">Head Position</label>
+          <input type="number" placeholder="Enter value here" id="head" required>
+        </fieldset>
+  
+        <fieldset>
+          <label for="inputs">Disk Requests</label>
+          <input type="number" placeholder="Enter value here" id="numInput">    
+        </fieldset>
+  
+        <fieldset class="addbutton">
+          <button id="addtoArray" onclick="addToArray()"><span>ADD</span></button>
+        </fieldset>
+  
+        
+      
+        <fieldset>
+          <label for="algorithm">Algorithm</label>
+          <select id="selector">
+            <option value="0">-- select --</option>
+            <option value="fcfs" >fcfs</option>
+            <option value="sstf" >sstf</option>
+            <option value="scan" >scan</option>
+            <option value="look" >look</option>
+            </select>
+        </fieldset>
+  
+        <fieldset>
+          <div class="innercontainer" id="extraOptionContainer" style="display: none;">
+            <label for="extraOption">Choose direction</label>
+            <select id="extraOption">
+              <option value="0">-- select direction --</option>
+              <option value="1">towards the smaller value</option>
+              <option value="2">towards the larger value</option>
+            </select>
+          </div>
+        </fieldset>
+  
+        <fieldset class="button1">
+          <button id="rst"><span>RESET</span></button>
+          <button id="btn"><span>SUBMIT</span></button>
+        </fieldset>
+     
+
+    </div>  
+    
+    <div class="outputcontainer">
+      <div class="outputname">
+        <h1>Output</h1>
+      </div>
+      <p>
+        Seek time and graph will be shown here
+      </p>
+      <div class="q1">
+        <table id="myTable">
+          <tbody></tbody>
+        </table>
+      </div>
+
+      <div id="demo"></div>
+      <div id="myPlot"></div>
+
+    </div>
+
+   
+  </div>  
+  <div class="footer">
+    <a href="https://github.com/vaibhav-devkate"><i class="fa-brands fa-github" ></i></a>
+    <a href="https://www.linkedin.com/in/vaibhav-devkate/"><i class="fa-brands fa-linkedin" style="color: white;"></i></a>
+    
+  </div>
+  <div class="footer2">
+    <div class="love">
+      <p style="margin-right: 5px";>Made with </p> <i class="fa-solid fa-heart"></i>
+    </div>
+    <p>by Vaibhav Devkate</p>
+  </div>
+    <script  src="index.js"></script>   
+    
+  </body>
+</html>
